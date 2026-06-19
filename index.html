@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BandaTBizOS Suite — Integrated Retail & Inventory Solutions</title>
+    <style>
+        :root {
+            --primary: #0f172a;
+            --retail-color: #1b4d3e;
+            --pos-color: #0284c7;
+            --backoffice-color: #5c3d2e;
+            --bg-light: #f8fafc;
+            --text-dark: #334155;
+        }
+
+        body {
+            font-family: 'Segoe UI', system-ui, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--primary), #1e293b);
+            color: white;
+            text-align: center;
+            padding: 60px 20px;
+        }
+
+        .header-logo {
+            max-width: 280px;
+            height: auto;
+            margin-bottom: 20px;
+            filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.3));
+        }
+
+        header p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto;
+            opacity: 0.9;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .app-row {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+            margin-bottom: 60px;
+            background: white;
+            padding: 40px;
+            border-radius: 16px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+            flex-wrap: wrap;
+        }
+
+        .app-row.reverse {
+            flex-direction: row-reverse;
+        }
+
+        .app-details {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .app-visuals {
+            flex: 1;
+            min-width: 300px;
+            text-align: center;
+        }
+
+        .app-visuals img {
+            width: 100%;
+            max-height: 380px;
+            object-fit: contain;
+            border-radius: 12px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+            background-color: #fafafa;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 6px 16px;
+            border-radius: 50px;
+            font-weight: bold;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+        }
+
+        h2 {
+            font-size: 2.2rem;
+            margin: 0 0 15px 0;
+            color: var(--primary);
+        }
+
+        ul {
+            padding-left: 20px;
+            margin-bottom: 30px;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+        }
+
+        .download-group {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            padding: 12px 24px;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 8px;
+            color: white;
+            transition: opacity 0.2s;
+        }
+
+        .btn:hover {
+            opacity: 0.9;
+        }
+
+        /* NEXT PAGE NAVIGATION FOOTER BUTTON */
+        .seq-nav-box {
+            text-align: center;
+            margin: 60px auto 20px;
+            max-width: 650px;
+            background: #e0f2fe;
+            border: 1px solid #bae6fd;
+            padding: 30px 20px;
+            border-radius: 16px;
+            box-shadow: 0 4px 15px rgba(2, 132, 199, 0.05);
+        }
+        .seq-nav-box p {
+            color: #0369a1;
+            font-weight: 500;
+            margin-bottom: 15px;
+            font-size: 1.05rem;
+        }
+        .seq-btn {
+            display: inline-block;
+            padding: 14px 32px;
+            background-color: #134074;
+            color: white;
+            font-weight: 700;
+            text-decoration: none;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(19, 64, 116, 0.2);
+            transition: transform 0.2s;
+        }
+        .seq-btn:hover {
+            transform: translateY(-2px);
+        }
+
+        footer {
+            background-color: var(--primary);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .footer-logo {
+            max-width: 160px;
+            height: auto;
+            margin-bottom: 15px;
+            opacity: 0.8;
+        }
+
+        .footer-contacts {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin: 30px 0;
+            flex-wrap: wrap;
+            font-size: 1.2rem;
+        }
+
+        .footer-contacts a {
+            color: #38bdf8;
+            text-decoration: none;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <img src="1000086744.png" alt="BandaTBizOS Logo" class="header-logo">
+        <p>The universal, offline-resilient business operating system built for retail stores, supermarkets, and complex wholesale enterprises.</p>
+    </header>
+
+    <div class="container">
+
+        <div class="app-row">
+            <div class="app-details">
+                <span class="badge" style="background: #dcfce7; color: var(--retail-color);">Flagship Module</span>
+                <h2>B-Retail</h2>
+                <p>Heavy-duty inventory and operations suite engineered for small to medium supermarkets, wholesalers, and specialized retail businesses like <strong>butcheries</strong>. Manage intricate material variations, vendor procurement metrics, and local shift accounting with ease.</p>
+                <ul>
+                    <li>**Dedicated Multi-Module Panels:** Features distinct built-in operational modules for Products, Stock, Purchases, Suppliers, Credit entries, and Customers.</li>
+                    <li>**Butchery & Meat Stock Adjustments:** Specialized fields optimized to record bulk weights, processing breakdown adjustments, and raw supplier margins.</li>
+                    <li>**Segmented Register Insights:** Instantly split dashboard summaries into global operational Reports and lane-isolated POS Reports.</li>
+                    <li>**Auto Background Backups:** Triggers background safety logs instantly upon initialization, protecting files smoothly without workflow interference.</li>
+                </ul>
+                <div class="download-group">
+                    <a href="B-Retail-Setup.exe" class="btn" style="background-color: var(--retail-color); margin-right: 10px;">💻 Download B-Retail for Windows</a>
+                    <a href="B-Retail-Mobile.apk" class="btn" style="background-color: #16a34a;">📥 Download B-Retail Android .APK</a>
+                </div>
+            </div>
+            <div class="app-visuals">
+                <img src="retail-promo.jpg" alt="B-Retail Enterprise Operations Terminal">
+            </div>
+        </div>
+
+        <div class="app-row reverse">
+            <div class="app-details">
+                <span class="badge" style="background: #e0f2fe; color: var(--pos-color);">Point of Sale</span>
+                <h2>B-POS</h2>
+                <p>The lean, lightweight check-out lane module. Built specifically for mobile register screens and tablet setups to handle high-speed storefront sales, invoice indexing, and currency conversions without exhausting system memory resources.</p>
+                <ul>
+                    <li>**Lightning Fast Invoicing:** Perform instant inventory lookups, draft customer balances, and export tidy checkout configurations quickly.</li>
+                    <li>**Multi-Currency Calculations:** Dynamic endpoint support to balance complex cash transactions and mixed local currency adjustments on the fly.</li>
+                    <li>**Local Lane Continuity:** Counter points operate continuously during active service drops, syncing totals locally over the workspace network.</li>
+                </ul>
+                <div class="download-group">
+                    <a href="B-POS-Register.apk" class="btn" style="background-color: var(--pos-color);">📥 Download Android .APK</a>
+                </div>
+            </div>
+            <div class="app-visuals">
+                <img src="pos-promo.jpg" alt="B-POS Front Facing Terminal Register Screen">
+            </div>
+        </div>
+
+        <div class="app-row">
+            <div class="app-details">
+                <span class="badge" style="background: #fef3c7; color: var(--backoffice-color);">Core Administrator Engine</span>
+                <h2>B-BackOffice</h2>
+                <p>The ultimate administrator console. This core database system functions as the master engine for your entire business site, integrating multi-app interactions into an iron-clad executive visibility dashboard.</p>
+                <ul>
+                    <li>**Live Operation Monitoring:** Real-time activity logs map device check-ins, monitoring exact workstation paths, log statuses, and user events securely.</li>
+                    <li>**Absolute Business Control:** Authorize new terminals, verify connected cash registers, input backend expense tracking data, and review overall profit & loss summaries.</li>
+                    <li>**Localized Server Workspace:** Acts as the primary database server, deploying a secure local network to feed up-to-the-minute details across every active app.</li>
+                </ul>
+                <div class="download-group">
+                    <a href="B-BackOffice-Core.exe" class="btn" style="background-color: var(--backoffice-color);">💻 Download Core Server Engine (Windows Only)</a>
+                </div>
+            </div>
+            <div class="app-visuals">
+                <img src="backoffice-promo.jpg" alt="B-BackOffice Administrator Live Monitoring Dashboard">
+            </div>
+        </div>
+
+        <div class="seq-nav-box">
+            <p>Running local workforce operations or looking for specialized regional accounting compliance parameters?</p>
+            <a href="payroll/" class="seq-btn">Continue to Page 2: Zimbabwe Payroll Portal →</a>
+        </div>
+
+    </div>
+
+    <footer>
+        <img src="1000086744.png" alt="BandaTBizOS Logo" class="footer-logo">
+        <h2>Scale Your Operation Globally with BandaTBizOS</h2>
+        <p>Inquire for localized multi-register networking support, offline configurations, or specialized business distributions.</p>
+        <div class="footer-contacts">
+            <span>💬 WhatsApp Business: <a href="https://wa.me/263773592002">+263 77 359 2002</a></span>
+            <span>✉️ Enterprise Mail: <a href="mailto:bpossupport@gmail.com">bpossupport@gmail.com</a></span>
+        </div>
+        <p style="opacity:0.5; margin-top:30px; font-size:0.9rem;">&copy; 2026 BandaTBizOS. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
