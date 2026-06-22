@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BandaTBizOS — Pricing & Core Licenses</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+  * { margin:0; padding:0; box-sizing:border-box; }
+  :root {
+    --navy:#1B2A4A; --teal:#0E7490; --gold:#B8860B;
+    --light:#F0F6FF; --white:#ffffff; --grey:#64748B;
+  }
+  body {
+    font-family:'Inter',sans-serif;
+    background:linear-gradient(135deg,#0a1628 0%,#1B2A4A 50%,#0d2240 100%);
+    min-height:100vh; color:var(--white);
+    padding-bottom: 60px;
+  }
+
+  /* HEADER */
+  .header { text-align:center; padding:50px 20px 30px; }
+  .logo-img {
+    width:260px; border-radius:16px;
+    filter:drop-shadow(0 8px 32px rgba(14,116,144,0.4));
+    margin-bottom:20px;
+  }
+  .header h1 { font-size:2.5rem; font-weight:800; letter-spacing:-1px; margin-bottom:10px; }
+  .header p { color:#94a3b8; max-width:600px; margin:0 auto; font-size:1.1rem; }
+
+  /* TOP BACK NAVIGATION */
+  .top-nav {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 30px;
+  }
+  .nav-btn {
+    display: inline-flex;
+    align-items: center;
+    padding: 10px 20px;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 30px;
+    color: #cbd5e1;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+  }
+  .nav-btn:hover {
+    background: rgba(255,255,255,0.12);
+    color: var(--white);
+    transform: translateY(-2px);
+  }
+
+  .container { max-width:1200px; margin:0 auto; padding:0 20px; }
+  .section-title { font-size:1.75rem; font-weight:700; margin:40px 0 20px; color:#38bdf8; letter-spacing:-0.5px; }
+
+  /* PRICING GRID */
+  .pricing-grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(300px, 1fr)); gap:30px; margin-bottom:30px; }
+  .card {
+    background:rgba(30,41,59,0.7); border:1px solid rgba(255,255,255,0.08);
+    border-radius:20px; padding:35px 30px; backdrop-filter:blur(16px);
+    display:flex; flex-direction:column; justify-content:between;
+    transition:transform 0.3s ease, border-color 0.3s ease;
+    position:relative; overflow:hidden;
+  }
+  .card:hover { transform:translateY(-5px); border-color:rgba(14,116,144,0.5); }
+  
+  .card.featured { border-color:var(--teal); background:linear-gradient(180deg, rgba(14,116,144,0.15) 0%, rgba(30,41,59,0.7) 100%); }
+  .badge {
+    position:absolute; top:20px; right:20px; background:var(--teal);
+    color:var(--white); font-size:0.75rem; font-weight:700;
+    padding:4px 12px; border-radius:12px; text-transform:uppercase;
+  }
+
+  .card h3 { font-size:1.5rem; font-weight:700; margin-bottom:4px; }
+  .limit { font-size:0.85rem; color:#94a3b8; font-weight:500; text-transform:uppercase; margin-bottom:20px; }
+  
+  .price-box { display:flex; align-items:baseline; margin-bottom:25px; }
+  .amt { font-size:3rem; font-weight:900; letter-spacing:-1px; }
+  .period { font-size:1rem; color:#94a3b8; margin-left:6px; }
+
+  .features { list-style:none; margin-bottom:35px; }
+  .features li { font-size:0.95rem; color:#cbd5e1; margin-bottom:12px; display:flex; align-items:center; gap:10px; }
+  .features li::before { content:"✓"; color:#38bdf8; font-weight:900; }
+
+  /* BUTTONS */
+  .action-btn {
+    display:block; text-align:center; padding:14px; border-radius:12px;
+    font-weight:700; text-decoration:none; color:var(--white);
+    background:var(--navy); border:1px solid rgba(255,255,255,0.1);
+    transition:all 0.2s ease; margin-top:auto;
+  }
+  .action-btn:hover { background:var(--white); color:var(--navy); }
+  .featured .action-btn { background:var(--teal); border:none; }
+  .featured .action-btn:hover { background:var(--white); color:var(--teal); }
+
+  /* BUNDLE ROW */
+  .bundle-card {
+    background:linear-gradient(90deg, rgba(109,40,217,0.15) 0%, rgba(30,41,59,0.7) 100%);
+    border:1px solid rgba(109,40,217,0.4); border-radius:24px;
+    padding:40px; margin:40px 0; display:flex; justify-content:space-between;
+    align-items:center; flex-wrap:wrap; gap:30px;
+  }
+  .bundle-left h3 { font-size:1.8rem; font-weight:800; color:#a78bfa; margin-bottom:8px; }
+  .bundle-left p { color:#cbd5e1; font-size:1.05rem; max-width:700px; }
+  .bundle-right { text-align:right; min-width:180px; }
+  .bundle-amt { font-size:3.5rem; font-weight:900; color:#a78bfa; line-height:1; }
+  .bundle-btn-main {
+    display:inline-block; margin-top:15px; padding:12px 28px; background:#6d28d9;
+    color:var(--white); font-weight:700; text-decoration:none; border-radius:10px;
+    transition:opacity 0.2s;
+  }
+  .bundle-btn-main:hover { opacity:0.9; }
+
+  /* NOTICES */
+  .notice-box {
+    background:rgba(30,41,59,0.4); border:1px solid rgba(255,255,255,0.05);
+    padding:24px; border-radius:16px; margin-top:40px; font-size:0.95rem; color:#94a3b8;
+  }
+  .notice-box strong { color:#cbd5e1; }
+
+  /* FOOTER */
+  .footer { text-align:center; padding:60px 20px 20px; border-top:1px solid rgba(255,255,255,0.05); margin-top:60px; }
+  .footer-contacts { display:flex; justify-content:center; gap:40px; margin:20px 0; flex-wrap:wrap; }
+  .footer-contacts a { color:#38bdf8; text-decoration:none; font-weight:600; }
+</style>
+</head>
+<body>
+
+  <div class="header">
+    <img src="../1000086744.png" alt="BandaTBizOS Logo" class="logo-img">
+    <h1>Ecosystem Plans & Licensing</h1>
+    <p>Predictable annual pricing structures built to ensure absolute standalone network autonomy.</p>
+  </div>
+
+  <div class="container">
+    
+    <div class="top-nav">
+      <a href="../" class="nav-btn">← Back to Retail Suite Portal</a>
+      <a href="../payroll/" class="nav-btn">Go to Zimbabwe Payroll Portal →</a>
+    </div>
+
+    <div class="section-title">Core Operational Applications</div>
+    <div class="pricing-grid">
+      
+      <div class="card">
+        <h3>B-Retail Standard</h3>
+        <div class="limit">Per Device Activation</div>
+        <div class="price-box"><div class="amt">$40</div><div class="period">/ year</div></div>
+        <ul class="features">
+          <li>Complete foundational Stock Controls</li>
+          <li>Heavy-duty Product & Supplier tracking panels</li>
+          <li>Advanced Butchery mass & processing registers</li>
+          <li>Auto background database protection system</li>
+        </ul>
+        <a href="https://wa.me/263773592002?text=I%20want%20to%20activate%20B-Retail%20Standard" class="action-btn">Activate Module</a>
+      </div>
+
+      <div class="card">
+        <h3>B-BackOffice Standard</h3>
+        <div class="limit">Per Device Activation</div>
+        <div class="price-box"><div class="amt">$60</div><div class="period">/ year</div></div>
+        <ul class="features">
+          <li>Central Server administrative console</li>
+          <li>Real-time connected lane mapping feeds</li>
+          <li>Cross-app terminal sync aggregations</li>
+          <li>Complete profit, loss, and expense oversight</li>
+        </ul>
+        <a href="https://wa.me/263773592002?text=I%20want%20to%20activate%20B-BackOffice%20Standard" class="action-btn">Deploy Workspace Server</a>
+      </div>
+
+      <div class="card featured">
+        <div class="badge">Ecosystem Choice</div>
+        <h3>Retail + Admin Bundle</h3>
+        <div class="limit">Per Device Activation</div>
+        <div class="price-box"><div class="amt">$80</div><div class="period">/ year</div></div>
+        <ul class="features">
+          <li>Full Flagship B-Retail tracking systems</li>
+          <li>Full Master B-BackOffice monitoring utilities</li>
+          <li>Instant localized network synchronization</li>
+          <li>Priority deployment consulting layout setup</li>
+        </ul>
+        <a href="https://wa.me/263773592002?text=I%20want%20the%20B-Retail%20%2B%20B-BackOffice%20Bundle" class="action-btn">Deploy Operations Bundle</a>
+      </div>
+
+    </div>
+
+    <div class="section-title">B-Payroll Pro (Zimbabwe Localized Compliance)</div>
+    <div class="pricing-grid">
+      
+      <div class="card">
+        <h3>Payroll Starter</h3>
+        <div class="limit">Up to 10 Employees</div>
+        <div class="price-box"><div class="amt">$25</div><div class="period">/ year</div></div>
+        <ul class="features">
+          <li>ZIMRA 2025/2026 domestic tax lookup tables</li>
+          <li>Dual-currency payroll accounting (USD / ZiG)</li>
+          <li>Automated NSSA and AIDS Levy percentages</li>
+          <li>Individual corporate payslip generations</li>
+        </ul>
+        <a href="https://wa.me/263773592002?text=I%20want%20B-Payroll%20Pro%20Starter" class="action-btn">Get Starter</a>
+      </div>
+
+      <div class="card featured">
+        <h3>Payroll Business</h3>
+        <div class="limit">Up to 50 Employees</div>
+        <div class="price-box"><div class="amt">$45</div><div class="period">/ year</div></div>
+        <ul class="features">
+          <li>Everything included in the Starter tier features</li>
+          <li>Expanded active workforce registry memory</li>
+          <li>Advanced employee performance shift logs</li>
+          <li>Historical run cycle archive audits lookup</li>
+        </ul>
+        <a href="https://wa.me/263773592002?text=I%20want%20B-Payroll%20Pro%20Business" class="action-btn">Get Business</a>
+      </div>
+
+      <div class="card">
+        <h3>Payroll Enterprise</h3>
+        <div class="limit">Unlimited Employees</div>
+        <div class="price-box"><div class="amt">$80</div><div class="period">/ year</div></div>
+        <ul class="features">
+          <li>Uncapped worker profile entry fields</li>
+          <li>Full statutory tax reporting file output exports</li>
+          <li>Bulk system modification pipelines</li>
+          <li>Direct developer architecture support access</li>
+        </ul>
+        <a href="https://wa.me/263773592002?text=I%20want%20B-Payroll%20Pro%20Enterprise" class="action-btn">Get Enterprise</a>
+      </div>
+
+    </div>
+
+    <div class="bundle-card">
+      <div class="bundle-left">
+        <h3>B-Retail + B-Payroll Pro Productive Bundle</h3>
+        <p>The total all-in-one standalone package for independent stores. Run your entire product supply logistics, till register checkouts, and fully ZIMRA-compliant employee payroll distributions simultaneously from a singular terminal unit.</p>
+        <a href="https://wa.me/263773592002?text=I%20want%20the%20B-Retail%20%2B%20B-Payroll%20Pro%2060%20Dollar%20Bundle" class="bundle-btn-main">Acquire System Bundle</a>
+      </div>
+      <div class="bundle-right">
+        <div class="bundle-amt">$60</div>
+        <div class="period" style="margin-left:0; margin-top:4px;">per year / per device</div>
+      </div>
+    </div>
+
+    <div class="notice-box">
+      ℹ️ <strong>Unified Enterprise Ecosystem Roadmap:</strong> Free evaluation profiles run unrestricted for 60 full days across foundational modules. As our roadmap advances, once the complete corporate operational landscape (incorporating B-Retail, B-POS, B-BackOffice, B-Payroll Pro, and B-FarmOS) finishes development cycles, our license framework will merge into one unified enterprise license string covering all workspace builds perfectly.
+    </div>
+
+  </div>
+
+  <div class="top-nav" style="margin-top: 40px;">
+      <a href="../" class="nav-btn">← Page 1: Main Retail Portal</a>
+      <a href="../payroll/" class="nav-btn">← Page 2: Zimbabwe Payroll Portal</a>
+  </div>
+
+  <div class="footer">
+    <div class="footer-contacts">
+      <span>💬 WhatsApp Lines: <a href="https://wa.me/263773592002">+263 77 359 2002</a></span>
+      <span>✉️ Corporate Inbox: <a href="mailto:BPOSSupport@gmail.com">BPOSSupport@gmail.com</a></span>
+    </div>
+    <p style="color:#64748b; font-size:0.85rem;">&copy; 2026 BandaTBizOS. Engineered for enterprise resilience.</p>
+  </div>
+
+</body>
+</html>
