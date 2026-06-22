@@ -3,245 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>B-Payroll Pro — ZIMRA 2025/2026 Compliant Payroll Engine</title>
+    <title>BandaTBizOS — Zimbabwe Payroll Portal</title>
     <style>
-        :root {
-            --primary: #0f172a;
-            --payroll-color: #134074;
-            --bg-light: #f8fafc;
-            --text-dark: #334155;
-        }
-
-        body {
-            font-family: 'Segoe UI', system-ui, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: var(--bg-light);
-            color: var(--text-dark);
-            line-height: 1.6;
-        }
-
-        header {
-            background: linear-gradient(135deg, var(--primary), #1e293b);
-            color: white;
-            text-align: center;
-            padding: 60px 20px;
-        }
-
-        .header-logo {
-            max-width: 240px;
-            height: auto;
-            margin-bottom: 20px;
-            filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.3));
-        }
-
-        header p {
-            font-size: 1.2rem;
-            max-width: 700px;
-            margin: 0 auto;
-            opacity: 0.9;
-        }
-
-        .container {
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 40px 20px;
-        }
-
-        /* Upgraded Section to Alternating Grid for Images */
-        .app-row {
-            display: flex;
-            align-items: center;
-            gap: 50px;
-            margin-bottom: 50px;
-            background: white;
-            padding: 40px;
-            border-radius: 16px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.03);
-            flex-wrap: wrap;
-        }
-
-        .app-row.reverse {
-            flex-direction: row-reverse;
-        }
-
-        .app-details {
-            flex: 1;
-            min-width: 300px;
-        }
-
-        .app-visuals {
-            flex: 1;
-            min-width: 300px;
-            text-align: center;
-        }
-
-        .app-visuals img {
-            width: 100%;
-            max-height: 380px;
-            object-fit: contain;
-            border-radius: 12px;
-            box-shadow: 0 8px 25px rgba(0,0,0,0.08);
-            background-color: #fafafa;
-        }
-
-        .badge {
-            display: inline-block;
-            padding: 6px 16px;
-            border-radius: 50px;
-            font-weight: bold;
-            font-size: 0.85rem;
-            text-transform: uppercase;
-            margin-bottom: 15px;
-            background: #e0f2fe;
-            color: var(--payroll-color);
-        }
-
-        h2 {
-            font-size: 2.2rem;
-            margin: 0 0 15px 0;
-            color: var(--primary);
-        }
-
-        ul {
-            padding-left: 20px;
-            margin-bottom: 30px;
-        }
-
-        ul li {
-            margin-bottom: 10px;
-        }
-
-        .download-group {
-            display: flex;
-            gap: 15px;
-            flex-wrap: wrap;
-        }
-
+        :root { --primary: #0f172a; --payroll-color: #134074; --bg-light: #f8fafc; --text-dark: #334155; }
+        body { font-family: 'Segoe UI', system-ui, sans-serif; margin: 0; padding: 0; background-color: var(--bg-light); color: var(--text-dark); }
+        header { background: linear-gradient(135deg, var(--primary), var(--payroll-color)); color: white; text-align: center; padding: 50px 20px; }
+        .header-logo { max-width: 240px; height: auto; margin-bottom: 15px; }
+        .container { max-width: 900px; margin: 0 auto; padding: 40px 20px; background: white; border-radius: 12px; margin-top: -30px; box-shadow: 0 4px 20px rgba(0,0,0,0.05); }
+        .download-group { display: flex; gap: 15px; flex-wrap: wrap; margin: 30px 0; justify-content: center; }
+        
+        /* RESTORED AND ENHANCED PAYROLL BUTTONS */
         .btn {
             display: inline-flex;
             align-items: center;
-            padding: 12px 24px;
-            font-weight: 600;
+            padding: 16px 28px;
+            font-weight: 700;
             text-decoration: none;
             border-radius: 8px;
             color: white;
-            transition: opacity 0.2s;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            font-size: 1.05rem;
+            transition: all 0.2s ease;
         }
-
-        .btn:hover {
-            opacity: 0.9;
-        }
-
-        .global-notice {
-            background: #f1f5f9;
-            border: 1px solid #cbd5e1;
-            padding: 20px;
-            border-radius: 12px;
-            text-align: center;
-            margin-top: 40px;
-        }
-
-        footer {
-            background-color: var(--primary);
-            color: white;
-            padding: 40px 20px;
-            text-align: center;
-            margin-top: 60px;
-        }
-
-        .footer-logo {
-            max-width: 140px;
-            height: auto;
-            margin-bottom: 15px;
-            opacity: 0.8;
-        }
-
-        .footer-contacts {
-            display: flex;
-            justify-content: center;
-            gap: 40px;
-            margin: 20px 0;
-            flex-wrap: wrap;
-            font-size: 1.1rem;
-        }
-
-        .footer-contacts a {
-            color: #38bdf8;
-            text-decoration: none;
-            font-weight: bold;
-        }
+        .btn:hover { transform: translateY(-2px); opacity: 0.95; }
+        
+        .nav-box { background: #f1f5f9; border: 1px solid #cbd5e1; padding: 30px; border-radius: 12px; text-align: center; margin-top: 40px; }
+        .nav-btn-group { display: flex; gap: 15px; justify-content: center; flex-wrap: wrap; margin-top: 15px; }
+        .nav-link-btn { display: inline-block; padding: 12px 24px; color: white; font-weight: 600; text-decoration: none; border-radius: 8px; }
     </style>
 </head>
 <body>
 
     <header>
         <img src="../1000086744.png" alt="BandaTBizOS Logo" class="header-logo">
-        <p>Automated Local Wage Calculations & statutory compliance structures built explicitly for Zimbabwean business parameters.</p>
+        <h1>B-Payroll Pro</h1>
+        <p>Zimbabwean Statutory Compliance Framework Edition</p>
     </header>
 
     <div class="container">
+        <h2>Automated Tax & Dual-Currency Payroll</h2>
+        <p>Fully updated with integrated ZIMRA 2025/2026 domestic calculation lookup tables to calculate USD and ZiG distributions concurrently, handling AIDS Levy, NSSA contributions, and printing out clean corporate slips easily.</p>
 
-        <div class="app-row">
-            <div class="app-details">
-                <span class="badge">Zimbabwe Localized Compliance</span>
-                <h2>B-Payroll Pro</h2>
-                <p>A specialized standalone payroll environment structured to execute secure wage distributions, employee splits, tax bracket matching, and statutory compliance report creations seamlessly.</p>
-                
-                <ul>
-                    <li><strong>ZIMRA 2025/2026 Ready:</strong> Programmed with current domestic tax tables, automating Pay As You Earn (PAYE) equations and AIDS Levy declarations dynamically.</li>
-                    <li><strong>Dual-Currency Accounting:</strong> Seamlessly manages splits, balances, and payouts between USD and ZiG variables natively.</li>
-                    <li><strong>NSSA Tracking:</strong> Easily calculate national social security parameters for both employee and employer percentages automatically.</li>
-                </ul>
-
-                <div class="download-group">
-                    <a href="../B-Payroll-Setup.apk" class="btn" ...>📥 Download Android .APK</a>
-                    <a href="../B-Payroll-Pro-Setup.exe" class="btn" ...>💻 Download Windows .EXE</a>
-                </div>
-            </div>
-            <div class="app-visuals">
-                <img src="promo-banner.jpg" alt="B-Payroll Pro Corporate Marketing Graphic">
-            </div>
+        <div class="download-group">
+            <a href="../B-Payroll-Setup.apk" class="btn" style="background-color: var(--payroll-color);">📥 Download Payroll Android .APK</a>
+            <a href="../B-Payroll-Pro-Setup.exe" class="btn" style="background-color: #475569;">💻 Download Payroll Windows .EXE</a>
         </div>
 
-        <div class="app-row reverse">
-            <div class="app-details">
-                <h2>Interactive Compliance Interface</h2>
-                <p>No more tangled spreadsheet formulas. B-Payroll Pro features an elegant, streamlined dashboard built to keep management transparent and tax runs instant.</p>
-                <ul>
-                    <li><strong>Payslip Distribution System:</strong> Drafts clean, printable corporate slips outlining currency distinctions, adjustments, and individual allowances clearly.</li>
-                    <li><strong>Historical Audit Logs:</strong> Access previous monthly or weekly pay cycles instantly to compare historical shifts or verify older employee allocations.</li>
-                </ul>
-            </div>
-            <div class="app-visuals">
-                <img src="screenshot-dashboard.jpg" alt="B-Payroll Pro Interactive Management Dashboard Preview">
-            </div>
-        </div>
-
-        <div style="background: #f1f5f9; border: 1px solid #cbd5e1; padding: 30px; border-radius: 12px; text-align: center; margin-top: 40px;">
+        <div class="nav-box">
             <h3>📊 System Selection Navigation</h3>
-            <p style="margin-bottom: 20px; color: #475569;">Ready to review our software licensing options, or need to verify retail system specifications?</p>
-
-            <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap;">
-                <a href="../" style="display: inline-block; padding: 12px 24px; background-color: #475569; color: white; font-weight: 600; text-decoration: none; border-radius: 8px;">
-                    ← Return to Page 1: Retail Suite
-                </a>
-                <a href="../pricing/" style="display: inline-block; padding: 12px 24px; background-color: #0284c7; color: white; font-weight: 600; text-decoration: none; border-radius: 8px;">
-                    Continue to Page 3: View Pricing Plans →
-                </a>
+            <p>Ready to review our software licensing options, or need to verify retail system specifications?</p>
+            <div class="nav-btn-group">
+                <a href="../" class="nav-link-btn" style="background-color: #475569;">← Page 1: Retail Suite</a>
+                <a href="../pricing/" class="nav-link-btn" style="background-color: #0284c7;">Page 3: View Pricing Plans →</a>
             </div>
         </div>
-
     </div>
-
-    <footer>
-        <img src="../1000086744.png" alt="BandaTBizOS Logo" class="footer-logo">
-        <div class="footer-contacts">
-            <span>💬 Support: <a href="https://wa.me/263773592002">+263 77 359 2002</a></span>
-            <span>✉️ Mail: <a href="mailto:bpossupport@gmail.com">bpossupport@gmail.com</a></span>
-        </div>
-        <p style="opacity:0.5; font-size:0.9rem;">&copy; 2026 BandaTBizOS. All rights reserved.</p>
-    </footer>
 
 </body>
 </html>
