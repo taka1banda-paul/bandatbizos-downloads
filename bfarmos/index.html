@@ -1,1 +1,182 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>B-FarmOS v1.0.0 | Simple Farm Management</title>
+<meta name="description" content="B-FarmOS helps farmers manage farm records, crops, livestock, expenses, sales and reports from Android or Windows.">
+<style>
+:root{--g:#164b32;--g2:#236b47;--g3:#0d3624;--cream:#f7f4e9;--gold:#e8b23a;--ink:#173126;--muted:#64736b;--white:#fff;--line:#dfe8e2;--shadow:0 18px 45px rgba(16,55,36,.12)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,Segoe UI,Arial,sans-serif;color:var(--ink);background:#fbfcfa;line-height:1.6}.wrap{width:min(1120px,92%);margin:auto}
+.hero{background:radial-gradient(circle at 85% 15%,rgba(232,178,58,.22),transparent 25%),linear-gradient(135deg,var(--g3),var(--g));color:#fff;overflow:hidden}.nav{display:flex;align-items:center;justify-content:space-between;padding:18px 0}.brand{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:.2px}.brand img{width:38px;height:38px;border-radius:10px;background:#fff;padding:3px}.nav-links{display:flex;gap:20px;align-items:center}.nav a{color:#fff;text-decoration:none;font-weight:700;font-size:14px}.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:45px;align-items:center;padding:58px 0 82px}.eyebrow{display:inline-flex;gap:8px;align-items:center;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);padding:7px 13px;border-radius:999px;font-size:13px;font-weight:700}.eyebrow b{color:#ffd66b}h1{font-size:clamp(44px,7vw,76px);line-height:1;margin:20px 0 12px;letter-spacing:-2px}.hero h2{font-size:clamp(22px,3vw,31px);margin:0 0 16px;color:#f8d77c}.hero p{font-size:18px;max-width:650px;color:rgba(255,255,255,.86)}.actions{display:flex;gap:13px;flex-wrap:wrap;margin:28px 0}.btn{display:inline-block;padding:14px 20px;border-radius:11px;text-decoration:none;font-weight:800;border:1px solid transparent}.primary{background:var(--gold);color:#2a2616}.secondary{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.28);color:#fff}.note{font-size:13px!important;color:rgba(255,255,255,.68)!important}.app-card{background:rgba(255,255,255,.96);border-radius:28px;padding:28px;text-align:center;box-shadow:0 28px 70px rgba(0,0,0,.22);color:var(--ink);transform:rotate(1deg)}.app-card img{width:min(240px,70%);border-radius:34px;box-shadow:var(--shadow)}.app-card .ver{display:inline-block;margin-top:18px;padding:6px 11px;background:#edf5ef;border-radius:999px;color:var(--g);font-size:12px;font-weight:800}.strip{background:var(--cream);border-bottom:1px solid #eee6cf}.strip-grid{display:grid;grid-template-columns:repeat(4,1fr);padding:22px 0;text-align:center}.strip strong{display:block;color:var(--g);font-size:20px}.strip span{font-size:13px;color:var(--muted)}section{padding:75px 0}.center{text-align:center;max-width:760px;margin:0 auto 38px}.kicker{color:var(--g2);font-weight:800;text-transform:uppercase;letter-spacing:1.4px;font-size:12px}.center h2{font-size:clamp(30px,5vw,46px);line-height:1.1;margin:9px 0 13px}.center p{color:var(--muted);font-size:17px}.features{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}.feature{background:#fff;border:1px solid var(--line);border-radius:17px;padding:24px;box-shadow:0 8px 25px rgba(18,52,35,.05)}.ico{font-size:30px}.feature h3{margin:9px 0 6px;color:var(--g)}.feature p{margin:0;color:var(--muted);font-size:14px}.split{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:stretch}.panel{background:#fff;border:1px solid var(--line);border-radius:22px;padding:32px;box-shadow:var(--shadow)}.panel h3{font-size:27px;margin:0 0 8px;color:var(--g)}.check{display:flex;gap:11px;margin:13px 0;color:#3f5148}.check b{color:var(--g2)}.pricing{background:var(--g3);color:#fff}.pricing .center p{color:rgba(255,255,255,.75)}.prices{display:grid;grid-template-columns:1fr 1fr;gap:22px;max-width:780px;margin:auto}.price{background:#fff;color:var(--ink);border-radius:22px;padding:30px;text-align:center;border:2px solid transparent}.price.life{border-color:var(--gold)}.price h3{margin:0;color:var(--g);font-size:23px}.amount{font-size:47px;font-weight:900;color:var(--g);line-height:1.1;margin:13px 0 2px}.period{color:var(--muted);font-size:14px}.price p{color:var(--muted);font-size:14px}.trial{max-width:780px;margin:22px auto 0;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);padding:19px;border-radius:15px;text-align:center}.contact-card{max-width:900px;margin:auto}.contact-detail{font-size:16px;color:var(--muted);margin:8px 0 18px}.contact-btn{margin-top:4px}.cta{background:linear-gradient(135deg,#eef6f0,#fff8df)}.cta-box{text-align:center;max-width:800px;margin:auto}.cta h2{font-size:clamp(32px,5vw,50px);line-height:1.08;margin:10px 0}.cta p{color:var(--muted);font-size:17px}footer{background:#0a291b;color:rgba(255,255,255,.72);padding:30px 0;text-align:center;font-size:13px}footer strong{color:#fff}footer a{color:#fff;text-decoration:none;font-weight:700}@media(max-width:850px){.hero-grid,.split{grid-template-columns:1fr}.features{grid-template-columns:1fr 1fr}.strip-grid{grid-template-columns:1fr 1fr;gap:18px}.app-card{max-width:420px;margin:auto}}@media(max-width:560px){.features,.prices{grid-template-columns:1fr}.hero-grid{padding-top:35px}.actions .btn{width:100%;text-align:center}.nav-links{gap:12px}.nav a{font-size:12px}section{padding:55px 0}.panel{padding:24px}}
+</style>
+</head>
+<body>
+
+<header class="hero">
+<div class="wrap nav">
+  <div class="brand"><img src="icon.png" alt="B-FarmOS">BandaTBizOS</div>
+  <div class="nav-links">
+    <a href="#pricing">Pricing</a>
+    <a href="#contact">Contact</a>
+  </div>
+</div>
+
+<div class="wrap hero-grid">
+<div>
+<div class="eyebrow">🌱 <b>Version 1.0.0</b> • Android + Windows</div>
+<h1>B-FarmOS</h1>
+<h2>Your Farm. Your Data. Your Business.</h2>
+<p>Stop relying on scattered notebooks and spreadsheets. Keep your farm records, crops, livestock, expenses, sales and reports organised in one simple system.</p>
+<div class="actions">
+  <a class="btn primary" href="BFarmOS_v1.0.0.apk">Download for Android</a>
+  <a class="btn secondary" href="BFarmOS_Windows_v1.0.0.exe">Download for Windows</a>
+</div>
+<p class="note">Start with a 60-day free trial. No payment is required to begin.</p>
+</div>
+
+<div class="app-card">
+  <img src="icon.png" alt="B-FarmOS app icon">
+  <div><span class="ver">B-FarmOS v1.0.0</span></div>
+  <h3>Simple tools for serious farm records.</h3>
+  <p>Designed to help you keep your farm information close at hand.</p>
+</div>
+</div>
+</header>
+
+<div class="strip">
+<div class="wrap strip-grid">
+  <div><strong>60 Days</strong><span>Free trial</span></div>
+  <div><strong>Android</strong><span>Mobile farming records</span></div>
+  <div><strong>Windows</strong><span>Desktop farming records</span></div>
+  <div><strong>2 Plans</strong><span>Annual or Lifetime</span></div>
+</div>
+</div>
+
+<section>
+<div class="wrap">
+<div class="center">
+  <div class="kicker">One place for your farm</div>
+  <h2>Know what is happening on your farm.</h2>
+  <p>B-FarmOS brings everyday farm records into one practical application, helping you keep information organised from the field to the office.</p>
+</div>
+
+<div class="features">
+<div class="feature"><div class="ico">🌾</div><h3>Crops & Seasons</h3><p>Organise seasons, crops, plots and important production records.</p></div>
+<div class="feature"><div class="ico">🐄</div><h3>Livestock</h3><p>Keep livestock records and record animal sales, including other animal types.</p></div>
+<div class="feature"><div class="ico">💰</div><h3>Costs & Expenses</h3><p>Record farm expenses and keep a clearer picture of your spending.</p></div>
+<div class="feature"><div class="ico">🧾</div><h3>Sales & Invoices</h3><p>Record produce sales and generate printable sales invoices.</p></div>
+<div class="feature"><div class="ico">🧪</div><h3>Soil Records</h3><p>Keep soil information available alongside your farm and crop records.</p></div>
+<div class="feature"><div class="ico">🏞️</div><h3>Farm & Plots</h3><p>Store your farm profile, land and plot information in one place.</p></div>
+<div class="feature"><div class="ico">📊</div><h3>Reports</h3><p>Generate crop, livestock and farm reports with your farm information.</p></div>
+<div class="feature"><div class="ico">🖥️</div><h3>Android + Windows</h3><p>Use the platform that fits your workflow, whether you're in the field or at the office.</p></div>
+</div>
+</div>
+</section>
+
+<section style="background:#f3f7f4">
+<div class="wrap split">
+<div class="panel">
+  <h3>Built for practical farming</h3>
+  <p style="color:var(--muted)">Good farm records help you see where your money goes, what you have produced and what has been sold.</p>
+  <div class="check"><b>✓</b><span>Keep farm information organised</span></div>
+  <div class="check"><b>✓</b><span>Record expenses and sales as they happen</span></div>
+  <div class="check"><b>✓</b><span>Keep crop and livestock records together</span></div>
+  <div class="check"><b>✓</b><span>Print useful farm reports and invoices</span></div>
+</div>
+
+<div class="panel">
+  <h3>Start small. Grow with it.</h3>
+  <p style="color:var(--muted)">B-FarmOS is designed to make farm record keeping approachable. Begin with the free trial and explore the tools before choosing a licence.</p>
+  <a class="btn" style="background:var(--g);color:#fff" href="#downloads">See download options</a>
+</div>
+</div>
+</section>
+
+<section class="pricing" id="pricing">
+<div class="wrap">
+<div class="center">
+  <div class="kicker" style="color:#f4ca62">Simple licensing</div>
+  <h2>Choose how you want to use B-FarmOS.</h2>
+  <p>Every new user can start with a 60-day trial. After the trial, choose an annual or lifetime licence.</p>
+</div>
+
+<div class="prices">
+<div class="price">
+  <h3>Annual</h3>
+  <div class="amount">$75</div>
+  <div class="period">per year</div>
+  <p>Annual licence with yearly renewal.</p>
+  <a class="btn" style="background:var(--g);color:#fff" href="#contact">Ask about licensing</a>
+</div>
+
+<div class="price life">
+  <h3>Lifetime</h3>
+  <div class="amount">$299</div>
+  <div class="period">once-off</div>
+  <p>One-time lifetime licence with no annual renewal.</p>
+  <a class="btn" style="background:var(--g);color:#fff" href="#contact">Ask about licensing</a>
+</div>
+</div>
+
+<div class="trial"><strong>🌱 60-Day Free Trial</strong><br>Try B-FarmOS before choosing a paid licence.</div>
+</div>
+</section>
+
+<section id="contact" style="background:#f3f7f4">
+<div class="wrap contact-card">
+<div class="center">
+  <div class="kicker">Assistance & Licensing</div>
+  <h2>We're here to help you get started.</h2>
+  <p>For assistance, licensing questions, installation support or help getting started with B-FarmOS, contact BandaTBizOS directly.</p>
+</div>
+
+<div class="split">
+<div class="panel" style="text-align:center">
+  <div style="font-size:38px">📧</div>
+  <h3>Email Support</h3>
+  <p class="contact-detail">For assistance and licensing enquiries.</p>
+  <a class="btn contact-btn" style="background:var(--g);color:#fff" href="mailto:email-bpossupport@gmail.com">email-bpossupport@gmail.com</a>
+</div>
+
+<div class="panel" style="text-align:center">
+  <div style="font-size:38px">💬</div>
+  <h3>WhatsApp Support</h3>
+  <p class="contact-detail">Chat with us directly for assistance and licensing.</p>
+  <a class="btn contact-btn" style="background:#25D366;color:#fff" href="https://wa.me/263773592002" target="_blank" rel="noopener">WhatsApp +263 773 592 002</a>
+</div>
+</div>
+
+<div style="text-align:center;margin-top:28px;color:var(--muted);font-size:14px">
+  <strong>For Assistance and Licensing, contact us at</strong><br>
+  <a href="mailto:email-bpossupport@gmail.com" style="color:var(--g);font-weight:800;text-decoration:none">email-bpossupport@gmail.com</a>
+  &nbsp; • &nbsp;
+  <a href="https://wa.me/263773592002" target="_blank" rel="noopener" style="color:var(--g);font-weight:800;text-decoration:none">WhatsApp +263 773 592 002</a>
+</div>
+</div>
+</section>
+
+<section id="downloads" class="cta">
+<div class="wrap cta-box">
+  <div class="kicker">Ready to get started?</div>
+  <h2>Put your farm records in one place.</h2>
+  <p>Download B-FarmOS v1.0.0 and start your 60-day free trial today.</p>
+  <div class="actions" style="justify-content:center">
+    <a class="btn primary" href="BFarmOS_v1.0.0.apk">Download Android</a>
+    <a class="btn" style="background:var(--g);color:#fff" href="BFarmOS_Windows_v1.0.0.exe">Download Windows</a>
+  </div>
+  <p class="note" style="color:var(--muted)!important">Need assistance or a licence? Contact us at <a href="#contact" style="color:var(--g);font-weight:800">Assistance & Licensing</a>.</p>
+</div>
+</section>
+
+<footer>
+<div class="wrap">
+  <strong>BandaTBizOS</strong> • B-FarmOS v1.0.0<br>
+  <span>For Assistance and Licensing: <a href="mailto:email-bpossupport@gmail.com">email-bpossupport@gmail.com</a> • <a href="https://wa.me/263773592002" target="_blank" rel="noopener">WhatsApp +263 773 592 002</a></span><br>
+  <span>© 2026 BandaTBizOS. All rights reserved.</span>
+</div>
+</footer>
+
+</body>
+</html>
 
